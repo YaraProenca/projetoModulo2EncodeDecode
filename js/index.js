@@ -2,9 +2,6 @@
 var userOption = document.getElementById('options')
 
 
-
-
-
 var rangeIncrement = document.querySelector('#key1')
 var rangeOut = document.querySelector('#outputKey1')
 
@@ -19,20 +16,19 @@ function writeText() {
   document.getElementById('res').innerHTML = textBox.value
 }
 
-
 var codeButton = document.getElementById('codeBtn')
 var decodeButton = document.getElementById('decodeBtn')
-// coletar dados
-// de 97 até 122 são minúsculas de 65 até 90 maiúsculas
-var reciveData  // recebe dados do usuário
-var increment  // incrementa núemros para codificar
 
-function encode() { //codifica os dados recebidos
-  let arr = reciveData.split('') // array que recebe data (split transforma em número )
-  let codeData = [] //receberá dados do for 
-  let arrCode = [] // receberá dados do for2
 
-  for (let i = 0; i < arr.length; i++) { // percorrerá o array estrutura padrão
+var reciveData = document.getElementById('txt')
+var increment = document.getElementById('key1')
+
+function encode() {
+  let arr = reciveData.split('')
+  let codeData = []
+  let arrCode = []
+
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i].charCodeAt() >= 65 && arr[i].charCodeAt() <= 90) {
       let getOutAscii = ((arr[i].charCodeAt()) - 65 + increment) % 26
       codeData.push(getOutAscii + 65)
@@ -86,15 +82,6 @@ function decode64() {
 
   return data64
 }
-
-//cifra de cesar
-//transformar letras em números
-// **toda letra é número, querida
-//quais números  quero trabalhar  tabela ascii ou converter p/ hexadecimal
-// como incrememtar para decodificar a msg
-//transformar as letrinhas bonitinhas novamente!
-
-
 
 
 
