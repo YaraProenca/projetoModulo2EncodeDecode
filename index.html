@@ -25,11 +25,11 @@
       <h2>Escolha uma opção</h2>
 
       <div clas="options">
-        <select name="options" id="options">
-          <optgroup>
+        <select name="options">
+          <optgroup id="options">
             <option value disabled selected>Escolha uma opção</option>
-            <option value="base64">Base 64</option>
-            <option value="cifraCesar">Cifra de César</option>
+            <option id="base64" value="base64">Base 64</option>
+            <option id="cifraC" value="cifraCesar">Cifra de César</option>
           </optgroup>
         </select>
       </div>
@@ -39,12 +39,12 @@
         <h3>O que deseja fazer?</h3>
         <div class="radioBox">
           <div class="radioCode">
-            <input type="radio" name="radioBtn" id="codeC" value="codeC" checked>
+            <input type="radio" name="radioBtn" id="codeBtn" value="codeC" checked>
             <label for="codeC"> Codificar </label>
           </div>
 
           <div class="radioDecode">
-            <input type="radio" name="radioBtn" id="decodeC" value="decodeC">
+            <input type="radio" name="radioBtn" id="decodeBtn" value="decodeC">
             <label for="decodeC"> Decodificar </label>
           </div>
         </div>
