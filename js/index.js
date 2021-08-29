@@ -1,3 +1,17 @@
+// declaração de variáveis
+var rangeIncrement = document.querySelector('#key1')
+var rangeOut = document.querySelector('#outputKey1')
+
+rangeIncrement.addEventListener('input', function () {
+  rangeOut.textContent = rangeIncrement.value
+})
+
+document.getElementById('txt').addEventListener('keyup', writeText)
+
+function writeText() {
+  let textBox = document.getElementById('txt')
+  document.getElementById('res').innerHTML = textBox.value
+}
 // coletar dados
 // de 97 até 122 são minúsculas de 65 até 90 maiúsculas
 var reciveData  // recebe dados do usuário

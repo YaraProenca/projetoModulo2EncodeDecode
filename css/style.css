@@ -33,7 +33,7 @@ h3 {
   justify-content: space-between;
 }
 
-.res {
+#res {
   background-color: rgb(170, 71, 71);
   width: 200px;
   height: 100px;
