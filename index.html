@@ -6,15 +6,70 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/media.css">
 
-  <title>Projeto de sprint: Passinho do Romano</title>
+  <title>Encode || Decode</title>
+
 </head>
 
 <body>
 
+  <section id="selections">
+    <div class="divSelections">
+
+      <h2>Escolha uma opção</h2>
+
+      <div clas="options">
+        <select name="options" id="options">
+          <optgroup>
+            <option value disabled selected>Escolha uma opção</option>
+            <option value="base64">Base 64</option>
+            <option value="cifraCesar">Cifra de César</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div id="codeBox">
+
+        <h3>O que deseja fazer?</h3>
+        <div class="radioBox">
+          <div class="radioCode">
+            <input type="radio" name="radioBtn" id="codeC" value="codeC" checked>
+            <label for="codeC"> Codificar </label>
+          </div>
+
+          <div class="radioDecode">
+            <input type="radio" name="radioBtn" id="decodeC" value="decodeC">
+            <label for="decodeC"> Decodificar </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="txtC">
+        <h3>Escreva aqui</h3>
+        <input type="text" name="txt" id="txt">
+        <div>
+          <input id="keey1" type='range' value="1" min="1" step="1" max="9999">
+          <output id="outputKeey1">1</output>
+        </div>
+        <h3>Resultado:</h3>
+        <div class="res">
+          <p>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <script src="./js/index.js"></script>
+
 </body>
 
 </html>
