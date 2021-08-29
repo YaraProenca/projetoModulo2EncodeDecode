@@ -12,9 +12,10 @@ function encode() { //codifica os dados recebidos
     if (arr[i].charCodeAt() >= 65 && arr[i].charCodeAt() <= 90) {
       let getOutAscii = ((arr[i].charCodeAt()) - 65 + increment) % 26
       codeData.push(getOutAscii + 65)
-      codeData.push((arr[i].charCodeAt()) + increment)
-    } else if (arr[i].charCodeAt() >= 97 && arr[i].charCodeAt <= 122) {
 
+    } else if (arr[i].charCodeAt() >= 97 && arr[i].charCodeAt() <= 122) {
+      let getOutAscii = ((arr[i].charCodeAt()) - 97 + increment) % 26
+      codeData.push(getOutAscii + 97)
     } else {
       codeData.push(arr[i].charCodeAt())
     }
@@ -32,8 +33,13 @@ function decode() {
   let arrCode = []
 
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] != ' ') {
-      codeData.push((arr[i].charCodeAt()) - increment)
+    if (arr[i].charCodeAt() >= 65 && arr[i].charCodeAt() <= 90) {
+      let getOutAscii = ((arr[i].charCodeAt()) - 65 - increment) % 26
+      codeData.push((getOutAscii < 0 ? getOutAscii + 26 : getOutAscii) + 65)
+
+    } else if (arr[i].charCodeAt() >= 97 && arr[i].charCodeAt() <= 122) {
+      let getOutAscii = ((arr[i].charCodeAt()) - 97 - increment) % 26
+      codeData.push((getOutAscii < 0 ? getOutAscii + 26 : getOutAscii) + 97)
     } else {
       codeData.push(arr[i].charCodeAt())
     }
