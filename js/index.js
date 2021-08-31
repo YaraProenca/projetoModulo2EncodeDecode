@@ -1,10 +1,15 @@
-
-var userOption = document.getElementById('options')
-
-
+// declaração de variáveis
+var reciveData = document.getElementById('txt') // input texto 
+var increment = document.getElementById('key1') // input range
 var rangeIncrement = document.querySelector('#key1')
 var rangeOut = document.querySelector('#outputKey1')
+var codeButton = document.getElementById('codeBtn')
+var decodeButton = document.getElementById('decodeBtn')
+var userOption64 = document.getElementById('base64')
+var userOptionC = document.getElementById('cifraC')
+var result = document.getElementById('res')
 
+// botão incrementar
 rangeIncrement.addEventListener('input', function () {
   rangeOut.textContent = rangeIncrement.value
 })
@@ -12,18 +17,29 @@ rangeIncrement.addEventListener('input', function () {
 document.getElementById('txt').addEventListener('keyup', writeText)
 
 function writeText() {
-  let textBox = document.getElementById('txt')
-  document.getElementById('res').innerHTML = textBox.value
+  document.getElementById('res').innerHTML = encode(reciveData.value, +increment.value)
 }
 
-var codeButton = document.getElementById('codeBtn')
-var decodeButton = document.getElementById('decodeBtn')
+codeButton.addEventListener('change', function () {
+  if (userOption64.value == 0) {
+    reciveData.innerHTML = encode(txt.value, +increment.value)
+    console.log('646464');
+  } else {
+    enconde64()
+    console.log('passei');
+  }
+})
 
+decodeButton.addEventListener('click', function () {
+  if (userOption64.value == 0) {
+    decode()
+  } else {
+    decode64()
+  }
+  console.log('aqui');
+})
 
-var reciveData = document.getElementById('txt')
-var increment = document.getElementById('key1')
-
-function encode() {
+function encode(reciveData, increment) {
   let arr = reciveData.split('')
   let codeData = []
   let arrCode = []

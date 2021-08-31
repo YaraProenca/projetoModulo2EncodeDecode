@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/media.css">
+
 
   <title>Encode || Decode</title>
 
@@ -28,8 +28,8 @@
         <select name="options">
           <optgroup id="options">
             <option value disabled selected>Escolha uma opção</option>
-            <option id="base64" value="base64">Base 64</option>
-            <option id="cifraC" value="cifraCesar">Cifra de César</option>
+            <option id="base64" value="0">Base 64</option>
+            <option id="cifraC" value="1">Cifra de César</option>
           </optgroup>
         </select>
       </div>
@@ -58,6 +58,7 @@
         <h3>Resultado:</h3>
 
         <div id="res">
+
         </div>
 
         <div>
@@ -67,7 +68,6 @@
       </div>
     </div>
   </section>
-
 
   <script src="./js/index.js"></script>
 
