@@ -25,12 +25,9 @@
       <h2>Escolha uma opção</h2>
 
       <div clas="options">
-        <select name="options">
-          <optgroup id="options">
-            <option value disabled selected>Escolha uma opção</option>
-            <option id="base64" value="0">Base 64</option>
-            <option id="cifraC" value="1">Cifra de César</option>
-          </optgroup>
+        <select name="options" id="options">
+          <option id="base64" value="0">Base 64</option>
+          <option id="cifraC" value="1" selected>Cifra de César</option>
         </select>
       </div>
 
@@ -53,7 +50,7 @@
       <div class="txtC">
         <h3>Escreva aqui</h3>
 
-        <input type="text" name="txt" id="txt">
+        <textarea type="text" name="txt" id="txt"> </textarea>
 
         <h3>Resultado:</h3>
 
@@ -65,8 +62,13 @@
           <input id="key1" type='range' min="1" max="99999" step="1">
           <output id="outputKey1">1</output>
         </div>
+
+        <button id="press"> aqui </button>
+
       </div>
     </div>
+
+
   </section>
 
   <script src="./js/index.js"></script>
