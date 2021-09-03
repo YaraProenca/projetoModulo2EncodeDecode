@@ -41,3 +41,5 @@ Não existem requisitos quanto ao estilo da página! Você tem liberdade total p
 \- [Base64 - Wikipédia](https://pt.wikipedia.org/wiki/Base64)
 
 \- [Base64 - MDN](https://developer.mozilla.org/en-US/docs/Glossary/Base64)
+
+Projeto para fins educativos.

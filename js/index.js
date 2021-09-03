@@ -1,6 +1,6 @@
 // declaração de variáveis
-var reciveData = document.getElementById('txt') // input texto 
-var increment = document.getElementById('key1') // input range
+var reciveData = document.getElementById('txt')
+var increment = document.getElementById('key1')
 var rangeIncrement = document.querySelector('#key1')
 var rangeOut = document.querySelector('#outputKey1')
 var codeButton = document.getElementById('codeBtn')
@@ -8,14 +8,36 @@ var decodeButton = document.getElementById('decodeBtn')
 var userOption = document.getElementById('options')
 var botao = document.getElementById('press')
 var result = document.getElementById('res')
+var divIncrement = document.getElementById('divIncrement')
+
+
+
+
+
 
 // botão incrementar
 rangeIncrement.addEventListener('input', function () {
   rangeOut.textContent = rangeIncrement.value
 })
 
+codeButton.addEventListener('click', function () {
+  botao.textContent = 'Codificar'
+})
+
+decodeButton.addEventListener('click', function () {
+  botao.textContent = 'Decodificar'
+})
 
 botao.addEventListener('click', writeText)
+
+
+userOption.addEventListener('change', function () {
+  let displayNone = userOption.value == '0' ? 'none' : 'flex'
+
+  divIncrement.style.display = displayNone
+})
+
+
 
 function writeText() {
   if (codeButton.checked) {
@@ -69,13 +91,9 @@ function encode(reciveData, increment) {
 
 function decode(reciveData, increment) {
 
-
-
   let arr = reciveData.split('')
   let codeData = []
   let arrCode = []
-
-
 
   if (userOption.value == '1') {
 

@@ -10,14 +10,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="./css/style.css">
 
   <title>Encode || Decode</title>
 
 </head>
 
 <body>
+  <header>
+    <h1>Codificador || Decodificador </h1>
+  </header>
 
   <section id="selections">
     <div class="divSelections">
@@ -34,7 +40,7 @@
       <div id="codeBox">
 
         <h3>O que deseja fazer?</h3>
-        <div>
+        <div id="radioBtns">
           <div class="radioCode">
             <input type="radio" name="radioBtn" id="codeBtn" value="codeC" checked>
             <label for="codeC"> Codificar </label>
@@ -50,21 +56,24 @@
       <div class="txtC">
         <h3>Escreva aqui</h3>
 
-        <textarea type="text" name="txt" id="txt"> </textarea>
+        <input type="text" name="txt" id="txt">
 
         <h3>Resultado:</h3>
 
         <div id="res">
+          <p>
 
+          </p>
         </div>
 
-        <div>
-          <input id="key1" type='range' min="1" max="99999" step="1">
-          <output id="outputKey1">1</output>
+        <div id="divIncrement">
+          <input class="key1" id="key1" type='range' min="1" max="99999" step="1" value="1">
+          <output class="outputKey1" id="outputKey1">1</output>
         </div>
 
-        <button id="press"> aqui </button>
-
+        <div id="btnDiv">
+          <button id="press"> Codificar </button>
+        </div>
       </div>
     </div>
 
@@ -72,7 +81,12 @@
   </section>
 
   <script src="./js/index.js"></script>
-
+  <footer>
+    <p>
+      Site criado para fins educativos Resilia Educação.
+    </p>
+    <a href="https://github.com/YaraProenca" target="_blank">Yara Proença</a> || T8
+  </footer>
 </body>
 
 </html>
